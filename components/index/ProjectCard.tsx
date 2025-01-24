@@ -5,10 +5,10 @@ const ProjectCard = ({ href, title, description }: Project) => {
     <a
       href={href}
       target="_blank"
-      className="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-accent sm:py-3"
+      className="-mx-3 flex flex-col rounded-md px-3 no-underline sm:hover:bg-accent sm:py-3"
     >
-      <div className="font-medium">{title}</div>
-      <div className="text-muted-foreground">{description}</div>
+      <span>{title}</span>
+      <span className="text-muted-foreground">{description}</span>
     </a>
   );
 };

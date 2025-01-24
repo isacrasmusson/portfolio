@@ -7,12 +7,16 @@ import { More } from "@/components/index/More";
 export default function Home() {
   return (
     <>
-      <Today className="mb-28" />
-      <Projects title="Projects" projects={projects} className="mb-28" />
+      <Today className="mb-16 sm:mb-32" />
+      <Projects
+        title="Projects"
+        projects={projects}
+        className="mb-16 sm:mb-32"
+      />
       <Projects
         title="Education"
         projects={educationalProjects}
-        className="mb-28"
+        className="mb-16 sm:mb-32"
       />
       <More />
     </>

@@ -1,8 +1,14 @@
+import Link from "next/link";
+
 const Logo = () => {
   return (
     <div>
-      <h1 className="font-medium">Isac Rasmusson</h1>
-      <span className="text-muted-foreground">Fullstack Developer</span>
+      <Link href="/" className="block font-medium no-underline leading-none">
+        Isac Rasmusson
+      </Link>
+      <span className="font-medium text-muted-foreground">
+        Fullstack Developer
+      </span>
     </div>
   );
 };

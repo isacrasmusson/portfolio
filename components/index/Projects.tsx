@@ -12,8 +12,8 @@ const Projects = ({
 }) => {
   return (
     <div className={className}>
-      <span className="mb-5 block font-medium sm:mb-6">{title}</span>
-      <div className="flex flex-col gap-4">
+      <span className="mb-5 sm:mb-4 block font-medium">{title}</span>
+      <div className="flex flex-col gap-7 sm:gap-4">
         {projects.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
