@@ -1,4 +1,5 @@
 export interface Project {
+  to?: string;
   href: string;
   year: string;
   type: string;

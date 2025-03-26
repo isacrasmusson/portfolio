@@ -64,6 +64,38 @@
   }
 }
 
+@layer utilities {
+  .p-page {
+    @apply px-6;
+  }
+
+  .overflow-mask {
+    --gradient-size-start: 24px;
+    --gradient-size-end: 20%;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--gradient-size-start),
+      #000 calc(100% - var(--gradient-size-end)),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--gradient-size-start),
+      #000 calc(100% - var(--gradient-size-end)),
+      transparent 100%
+    );
+  }
+
+  @screen sm {
+    .overflow-mask {
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+}
+
 :root {
   font-family: "Geist", serif;
   font-optical-sizing: auto;

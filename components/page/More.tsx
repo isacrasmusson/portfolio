@@ -1,7 +1,9 @@
 const More = ({ className }: { className?: string }) => {
   return (
     <div className={className}>
-      <span className="mb-5 block font-medium sm:mb-6">More</span>
+      <span className="mb-3 sm:mb-4 block font-medium font-newsreader italic">
+        More
+      </span>
       <span className="text-muted-foreground">
         You can see more of my experience on{" "}
         <a

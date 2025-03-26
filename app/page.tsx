@@ -1,24 +1,18 @@
-import { Today } from "@/components/index/Today";
-import { Projects } from "@/components/index/Projects";
-import { projects } from "@/components/index/data/projects";
-import { educationalProjects } from "@/components/index/data/educationalProjects";
-import { More } from "@/components/index/More";
+import { Today } from "@/components/page/Today";
+import { Projects } from "@/components/page/Projects";
+import { projects } from "@/components/page/data/projects";
+import { More } from "@/components/page/More";
+import { Technologies } from "@/components/page/Technologies";
+import { Education } from "@/components/page/Education";
 
 export default function Home() {
   return (
-    <>
-      <Today className="mb-16 sm:mb-32" />
-      <Projects
-        title="Projects"
-        projects={projects}
-        className="mb-16 sm:mb-32"
-      />
-      <Projects
-        title="Education"
-        projects={educationalProjects}
-        className="mb-16 sm:mb-32"
-      />
-      <More />
-    </>
+    <div aria-label="Home page" className="space-y-16 sm:space-y-20">
+      <Today className="p-page" />
+      <Projects title="Projects" projects={projects} className="p-page" />
+      <Education className="p-page" />
+      <Technologies />
+      <More className="p-page -mt-6 sm:mt-0" />
+    </div>
   );
 }

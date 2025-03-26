@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        newsreader: ["var(--font-newsreader)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
