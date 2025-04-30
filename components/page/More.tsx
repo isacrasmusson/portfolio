@@ -15,7 +15,7 @@ const More = ({ className }: { className?: string }) => {
         </a>{" "}
         and more of my code on{" "}
         <a
-          href="https://github.com/johnschatner?tab=repositories"
+          href="https://github.com/irasmusson?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
         >
