@@ -7,7 +7,7 @@ const Logo = () => {
         Isac Rasmusson
       </Link>
       <span className="font-medium text-muted-foreground">
-        Fullstack Developer
+        Software Engineer · IKEA
       </span>
     </div>
   );

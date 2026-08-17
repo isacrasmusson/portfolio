@@ -32,15 +32,15 @@ function TechnologyBlock({
           {type}
         </span>
       )}
-      <ul className="space-y-1">{children}</ul>
+      <ul className="list-none space-y-1 p-0">{children}</ul>
     </section>
   );
 }
 
 function Technologies({ className }: React.ComponentProps<"section">) {
   return (
-    <section className={cn("sm:p-page space-y-4", className)}>
-      <h2 className="p-page sm:px-0 block font-newsreader font-medium italic">
+    <section className={cn("sm:px-6 space-y-4", className)}>
+      <h2 className="px-6 sm:px-0 block font-newsreader font-medium italic">
         Technologies
       </h2>
 

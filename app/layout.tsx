@@ -18,7 +18,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: "Isac Rasmusson",
   description:
-    "I work as a fullstack developer at Cope, where I am part of a team that develops and maintains a financial system for both the public and private sectors.",
+    "I work as a software engineer at IKEA Financial Services, helping develop and maintain financial systems.",
 };
 
 export default function RootLayout({
