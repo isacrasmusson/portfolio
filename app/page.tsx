@@ -12,7 +12,7 @@ export default function Home() {
       <Projects title="Projects" projects={projects} className="p-page" />
       <Education className="p-page" />
       <Technologies />
-      <More className="p-page -mt-6 sm:mt-0" />
+      <More className="p-page" />
     </div>
   );
 }

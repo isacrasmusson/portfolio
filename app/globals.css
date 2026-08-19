@@ -95,29 +95,30 @@
   }
 }
 
-:root {
-  font-family: "Geist", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-
-  --primary-color-white: #f7f7f7;
-  --primary-color-light: #ffffff;
-  --primary-color-dark: #595959;
-  --primary-color-black: #080808;
-  --primary-color-neutral: #d8d8d8;
-}
-
 a {
   text-decoration: underline;
-  text-underline-position: from-font;
+  text-underline-offset: 3px;
   text-decoration-thickness: 1px;
-  text-decoration-color: var(--muted-foreground);
+  text-decoration-color: hsl(var(--muted-foreground) / 0.5);
+  transition: text-decoration-color 150ms ease;
 }
 
 a:hover {
-  text-decoration-color: var(--foreground);
+  text-decoration-color: hsl(var(--foreground));
 }
 
 p {
   line-height: 1.65;
+  text-wrap: pretty;
+}
+
+::selection {
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 2px;
 }

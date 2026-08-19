@@ -1,10 +1,10 @@
 const More = ({ className }: { className?: string }) => {
   return (
-    <div className={className}>
-      <span className="mb-3 sm:mb-4 block font-medium font-newsreader italic">
+    <footer className={className}>
+      <h2 className="mb-3 sm:mb-4 block font-newsreader font-medium italic">
         More
-      </span>
-      <span className="text-muted-foreground">
+      </h2>
+      <p className="text-muted-foreground">
         You can see more of my experience on{" "}
         <a
           href="https://www.linkedin.com/in/isac-rasmusson/"
@@ -22,8 +22,8 @@ const More = ({ className }: { className?: string }) => {
           GitHub
         </a>
         .
-      </span>
-    </div>
+      </p>
+    </footer>
   );
 };
 

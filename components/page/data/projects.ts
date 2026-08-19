@@ -2,12 +2,12 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    to: "sharetaste",
-    href: "https://sharetaste.io/",
+    to: "flavors",
+    href: "https://flavors.app/",
     year: "2023",
     type: "Personal",
-    title: "Sharetaste",
-    description: "Easy recipe sharing with smart cooking features.",
+    title: "Flavors",
+    description: "Collect recipes, plan your week, cook smarter.",
     language: "React",
   },
 ];

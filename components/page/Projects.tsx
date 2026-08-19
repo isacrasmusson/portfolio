@@ -12,7 +12,7 @@ const Projects = ({
 }) => {
   return (
     <div className={className}>
-      <h2 className="mb-1.5 block font-medium font-newsreader italic">
+      <h2 className="mb-3 sm:mb-1.5 block font-newsreader font-medium italic">
         {title}
       </h2>
       <div className="flex flex-col gap-7 sm:gap-4">

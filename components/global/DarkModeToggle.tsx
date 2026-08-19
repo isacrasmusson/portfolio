@@ -1,26 +1,28 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon } from "lucide-react";
 
 const DarkModeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 [&_svg]:size-4"
-      aria-label="Dark mode toggle"
+      className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground [&_svg]:size-4"
+      aria-label="Toggle dark mode"
     >
-      {theme === "light" ? <SunIcon /> : <MoonIcon />}
+      {mounted && resolvedTheme === "dark" ? <MoonIcon /> : <SunIcon />}
     </button>
   );
 };
