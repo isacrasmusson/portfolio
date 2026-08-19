@@ -126,15 +126,23 @@
 }
 
 a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  text-decoration-color: hsl(var(--muted-foreground) / 0.5);
-  transition: text-decoration-color 150ms ease;
+  text-decoration: none;
 }
 
-a:hover {
-  text-decoration-color: hsl(var(--foreground));
+/* Prose links: foreground color carries the affordance, underline on hover only */
+p a,
+li a,
+dd a {
+  color: hsl(var(--foreground));
+}
+
+p a:hover,
+li a:hover,
+dd a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: hsl(var(--muted-foreground) / 0.6);
 }
 
 p {

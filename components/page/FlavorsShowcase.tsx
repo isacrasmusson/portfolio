@@ -18,20 +18,9 @@ const FlavorsShowcase = ({ className }: { className?: string }) => {
         rel="noopener noreferrer"
         className="group block no-underline"
       >
-        <div className="flavors-canvas overflow-hidden rounded-2xl border border-black/5 p-4 sm:p-8 dark:border-white/10">
-          <div className="overflow-hidden rounded-xl border border-black/10 bg-background shadow-[0_20px_50px_-20px_rgba(60,20,0,0.4)] transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:shadow-[0_28px_60px_-20px_rgba(60,20,0,0.5)] dark:border-white/10">
-            <div className="flex items-center gap-2 border-b border-black/5 bg-muted/60 px-3 py-2 dark:border-white/5">
-              <span className="flex gap-1.5">
-                <span className="size-2.5 rounded-full bg-[#ff5f57]" />
-                <span className="size-2.5 rounded-full bg-[#febc2e]" />
-                <span className="size-2.5 rounded-full bg-[#28c840]" />
-              </span>
-              <span className="mx-auto -translate-x-3 rounded-md bg-background/80 px-3 py-0.5 text-[11px] text-muted-foreground">
-                flavors.app
-              </span>
-            </div>
-
-            <div className="relative aspect-16/10 overflow-hidden">
+        <div className="flavors-canvas overflow-hidden rounded-2xl p-4 sm:p-8">
+          <div className="overflow-hidden rounded-lg transition-transform duration-500 ease-out group-hover:scale-[1.01]">
+            <div className="relative aspect-16/10 overflow-hidden bg-white">
               <iframe
                 src="https://www.flavors.app"
                 title="Live preview of flavors.app"
