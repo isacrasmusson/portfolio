@@ -18,7 +18,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: "Isac Rasmusson",
   description:
-    "Software engineer at IKEA Financial Services, building Flavors on the side — a recipe app that makes cooking simpler.",
+    "Software engineer at IKEA Financial Services. On the side I'm building Flavors, a recipe app.",
 };
 
 export default function RootLayout({
