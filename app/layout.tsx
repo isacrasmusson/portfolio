@@ -18,7 +18,7 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: "Isac Rasmusson",
   description:
-    "I work as a software engineer at IKEA Financial Services, helping develop and maintain financial systems.",
+    "Software engineer at IKEA Financial Services, building Flavors on the side — a recipe app that makes cooking simpler.",
 };
 
 export default function RootLayout({
@@ -36,9 +36,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="mx-auto max-w-[692px] py-12 md:py-16 antialiased overflow-x-hidden">
-            <Header className="mb-20 p-page" />
-            <main>{children}</main>
+          <div className="mx-auto max-w-[692px] py-12 md:py-20 antialiased overflow-x-hidden">
+            <Header className="mb-16 sm:mb-20 p-page" />
+            <main className="pb-4">{children}</main>
           </div>
         </ThemeProvider>
       </body>

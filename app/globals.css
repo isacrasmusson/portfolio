@@ -68,6 +68,36 @@
     @apply px-6;
   }
 
+  /* Warm, food-toned backdrop behind the Flavors live preview */
+  .flavors-canvas {
+    background: radial-gradient(
+      120% 150% at 15% 0%,
+      hsl(28 85% 93%) 0%,
+      hsl(12 65% 93%) 45%,
+      hsl(40 25% 96%) 100%
+    );
+  }
+
+  .dark .flavors-canvas {
+    background: radial-gradient(
+      120% 150% at 15% 0%,
+      hsl(24 40% 13%) 0%,
+      hsl(10 30% 10%) 45%,
+      hsl(30 10% 7%) 100%
+    );
+  }
+
+  .enter {
+    animation: enter 0.7s cubic-bezier(0.2, 0.6, 0.2, 1) both;
+    animation-delay: calc(var(--stagger, 0) * 90ms);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .enter {
+      animation: none;
+    }
+  }
+
   .overflow-mask {
     --gradient-size-start: 24px;
     --gradient-size-end: 20%;
@@ -121,4 +151,15 @@ p {
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

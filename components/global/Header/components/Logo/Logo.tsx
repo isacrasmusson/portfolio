@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <div>
-      <Link href="/" className="block font-medium no-underline leading-none">
+    <div className="leading-tight">
+      <Link href="/" className="block font-medium no-underline">
         Isac Rasmusson
       </Link>
-      <span className="font-medium text-muted-foreground">
+      <span className="text-sm text-muted-foreground">
         Software Engineer · IKEA
       </span>
     </div>

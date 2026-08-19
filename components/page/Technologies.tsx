@@ -1,80 +1,32 @@
-import { cn } from "@/lib/utils";
-
-function Technology({
-  children,
-  className,
-  ...props
-}: React.ComponentProps<"li">) {
-  return (
-    <li
-      {...props}
-      className={cn("whitespace-nowrap text-muted-foreground", className)}
-    >
-      {children}
-    </li>
-  );
-}
-
-function TechnologyBlock({
-  children,
-  type,
-  className,
-  ...props
-}: React.ComponentProps<"div"> & { type?: string }) {
-  return (
-    <section
-      {...props}
-      aria-label={type}
-      className={cn("space-y-2", className)}
-    >
-      {type && (
-        <span className="font-newsreader text-muted-foreground block text-sm">
-          {type}
-        </span>
-      )}
-      <ul className="list-none space-y-1 p-0">{children}</ul>
-    </section>
-  );
-}
+const groups: [string, string[]][] = [
+  ["Core", ["JavaScript", "TypeScript", "Node"]],
+  ["Frontend", ["React", "CSS", "Tailwind", "TanStack", "Vite"]],
+  ["Backend", ["Express", "MongoDB", "PostgreSQL", "Drizzle", "Mongoose"]],
+  [
+    "DevOps & Testing",
+    ["Docker", "Vitest", "React Testing Library", "Playwright", "Testcontainers"],
+  ],
+];
 
 function Technologies({ className }: React.ComponentProps<"section">) {
   return (
-    <section className={cn("sm:px-6 space-y-4", className)}>
-      <h2 className="px-6 sm:px-0 block font-newsreader font-medium italic">
+    <section className={className}>
+      <h2 className="mb-3 sm:mb-4 block font-newsreader font-medium italic">
         Technologies
       </h2>
-
-      <div className="overflow-mask pl-6 pr-16 pb-6 sm:pb-0 sm:pl-0 sm:pr-0 flex flex-row justify-between gap-20 sm:gap-12 overflow-x-auto overflow-y-hidden">
-        <TechnologyBlock type="Core">
-          <Technology>JavaScript</Technology>
-          <Technology>TypeScript</Technology>
-          <Technology>Node</Technology>
-        </TechnologyBlock>
-
-        <TechnologyBlock type="Frontend">
-          <Technology>React</Technology>
-          <Technology>CSS</Technology>
-          <Technology>Tailwind</Technology>
-          <Technology>TanStack</Technology>
-          <Technology>Vite</Technology>
-        </TechnologyBlock>
-
-        <TechnologyBlock type="Backend">
-          <Technology>Express</Technology>
-          <Technology>MongoDB</Technology>
-          <Technology>PostgreSQL</Technology>
-          <Technology>Drizzle</Technology>
-          <Technology>Mongoose</Technology>
-        </TechnologyBlock>
-
-        <TechnologyBlock type="DevOps & Testing">
-          <Technology>Docker</Technology>
-          <Technology>Vitest</Technology>
-          <Technology>React Testing Library</Technology>
-          <Technology>Playwright</Technology>
-          <Technology>Testcontainers</Technology>
-        </TechnologyBlock>
-      </div>
+      <dl className="space-y-4 sm:space-y-3">
+        {groups.map(([label, items]) => (
+          <div
+            key={label}
+            className="grid gap-0.5 sm:grid-cols-[10rem_1fr] sm:gap-4"
+          >
+            <dt className="text-sm leading-relaxed text-muted-foreground">
+              {label}
+            </dt>
+            <dd>{items.join(" · ")}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }
